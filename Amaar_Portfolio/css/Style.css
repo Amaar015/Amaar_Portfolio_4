@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --home: #c9d8e6;
+    --dark-blue: #182f4b;
+    --blue: #266396;
+
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: var(--home);
+}
+
+#nav {
+    padding: 1.5rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 13rem;
+}
+
+.logo {
+    display: flex;
+    gap: 0.2rem;
+    /* margin-left: 4rem; */
+    color: var(--dark-blue)
+}
+
+#nav ul {
+
+    margin: 0.5rem 0rem 0rem 12rem;
+    display: flex;
+    gap: 1.8rem;
+    text-align: center;
+}
+
+#nav ul li {
+    display: inline-block;
+
+}
+
+#nav ul li a {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+}
+
+#nav ul li a.active {
+    color: var(--blue);
+    border-bottom: 3px solid #266396;
+    padding-bottom: 0.3rem;
+
+}
+
+.checkbtn {
+    font-size: 20px;
+    color: var(--dark-blue);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    #nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 898px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 140vh;
+        background: var(--blue);
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .2s;
+    }
+
+    #nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+
+    }
+
+    #nav ul li a {
+        font-size: 15px;
+
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: var(--dark-blue);
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
