@@ -289,8 +289,8 @@ header .navbar ul li a:hover {
 
 /* About Page styling source code */
 #about {
-    height: 100vh;
-    padding: 2rem 7%;
+    height: 100%;
+    padding: 0 7%;
     padding-top: 14rem;
 
 }
@@ -353,7 +353,8 @@ header .navbar ul li a:hover {
 /* Services page styling  */
 #services {
     width: 100%;
-    padding: 4rem 7%;
+    padding: 0 7%;
+    padding-top: 12rem;
 }
 
 #services h1 {
@@ -384,8 +385,14 @@ header .navbar ul li a:hover {
     display: flex;
     padding: 4rem 1rem;
     flex-direction: column;
-    background: #222;
+    transition: all 0.3s ease-in;
+    background: transparent;
+}
 
+.service:hover {
+    background: #c9c7c7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
 }
 
 .service i {
@@ -406,25 +413,25 @@ header .navbar ul li a:hover {
 }
 
 .service:nth-of-type(4) i {
-    color: var(--red);
+    color: #00ffff;
 }
 
 .service:nth-of-type(5) i {
-    color: var(--red);
+    color: #76ba1b;
 }
 
 .service:nth-of-type(6) i {
-    color: var(--red);
+    color: #ca5cdd;
 }
 
 .service h3 {
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .service>p {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 
@@ -494,6 +501,12 @@ header .navbar ul li a:hover {
 
 }
 
+@media (max-width:710px) {
+    #services {
+        padding-top: 15rem;
+    }
+}
+
 @media (max-width:1024px) {
     .box:nth-of-type(2) {
         top: 22rem;
@@ -510,6 +523,12 @@ header .navbar ul li a:hover {
         left: 45rem;
     }
 }
+
+/* @media (max-width:675px) {
+    #services {
+        padding-top: 14rem;
+    }
+} */
 
 @media (max-width:600px) {
 
@@ -541,6 +560,10 @@ header .navbar ul li a:hover {
     #about {
         padding: 4rem 4%;
     }
+
+    /* #services {
+        padding-top: 25rem;
+    } */
 }
 
 @media (max-width:430px) {
@@ -587,4 +610,23 @@ header .navbar ul li a:hover {
     .btn {
         font-size: 1.8rem;
     }
+
+    #services {
+        padding: 0 5%;
+        /* padding-top: 22rem; */
+    }
+
+    #services>p {
+        width: 280px;
+        margin: 0.5rem auto;
+        font-size: 1.3rem;
+
+    }
+
 }
+
+/* @media (max-width:290px) {
+    #services {
+        padding-top: 28rem;
+    }
+} */
