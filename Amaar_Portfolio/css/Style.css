@@ -42,6 +42,11 @@ body {
     background: #eee;
 }
 
+
+section {
+    padding: 2rem 9%;
+}
+
 /* section {
     min-height: 100%;
     padding: 9% 7%;
@@ -155,27 +160,28 @@ header .navbar ul li a:hover {
 }
 
 /* home section  */
-#home {
-    min-height: 90%;
-    padding: 9% 10%;
-    /* padding-top: 9%; */
+.home {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: row wrap;
+    min-height: 100vh;
 }
 
-.main {
+/* .main {
     display: flex;
     justify-content: center;
     gap: 6rem;
     align-items: center;
     margin-top: 5rem;
     flex-wrap: wrap;
-}
+} */
 
-.content {
-    flex: 1 1 30rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 4rem;
+.home .content {
+
+    flex: 1 1 25rem;
+    padding-top: 6.5rem;
 }
 
 .content p {
@@ -199,9 +205,11 @@ header .navbar ul li a:hover {
 
 
 
-.image {
-    padding-top: 5rem;
-    flex: 1 1 30rem;
+.home .image {
+    flex: 1 1 25rem;
+    float: left;
+    position: relative;
+    margin-top: 5rem;
 
 }
 
